@@ -1,5 +1,5 @@
 import React from "react";
-import { STORAGE_URL } from "../../../../utils/apies";
+import { STORAGE_URL, STORAGE_TOKEN } from "../../../../utils/apies";
 
 export const ProductItem = (props) => {
   const { product, addToCart } = props;
@@ -8,7 +8,7 @@ export const ProductItem = (props) => {
     <div className={`product-item ${product.id} mb-4`}>
       <img
         className="product-item__image"
-        src={`${STORAGE_URL}${product.image}?alt=media&token=65a20e7f-e979-44a1-8f44-e4580a56bfee`}
+        src={`${STORAGE_URL}${product.image}?alt=media&token=${STORAGE_TOKEN}`}
         alt=""
       />
       <h5 className="product-item__title mt-3 font-weight-bold">

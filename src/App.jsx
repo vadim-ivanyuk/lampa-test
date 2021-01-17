@@ -14,11 +14,15 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter basename="/lampa-test/">
+    // <BrowserRouter basename="/lampa-test/">
+    //   <Header />
+    //   <Route exact path="/" component={MainPage} />
+    //   <Route path="/cart/" component={CartPage} />
+    // </BrowserRouter>
+    <>
       <Header />
-      <Route exact path="/" component={MainPage} />
-      <Route path="/cart/" component={CartPage} />
-    </BrowserRouter>
+      <MainPage />
+    </>
   );
 }
 

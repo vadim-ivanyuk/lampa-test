@@ -18,3 +18,5 @@ export const FIREBASE_DB = firebase.database();
 
 export const STORAGE_URL =
   "https://firebasestorage.googleapis.com/v0/b/lampa-test-ivanyuk.appspot.com/o/";
+
+export const STORAGE_TOKEN = "65a20e7f-e979-44a1-8f44-e4580a56bfee";
