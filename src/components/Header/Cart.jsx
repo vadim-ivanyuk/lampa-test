@@ -26,10 +26,9 @@ export const Cart = () => {
         )}
       </div>
       <div>
-        {/* <Link to="/cart/">
+        <Link to="/cart/">
           <button className="btn btn-light text-uppercase">Cart</button>
-        </Link> */}
-        <button className="btn btn-light text-uppercase">Cart</button>
+        </Link>
       </div>
     </>
   );
