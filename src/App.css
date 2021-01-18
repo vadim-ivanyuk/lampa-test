@@ -18,6 +18,14 @@ code {
   padding: 0px;
 }
 
+a {
+  color: black;
+}
+
+a:hover {
+  color: black
+}
+
 button {
   border-radius: 0px !important;
 }
@@ -35,6 +43,7 @@ button {
 
 .product-item__image {
   width: 270px;
+  max-height: 200px;
   object-fit: cover;
 }
 
@@ -44,4 +53,8 @@ button {
   text-overflow: ellipsis;
   overflow: hidden;
   -webkit-line-clamp: 5;
+}
+
+.cart-products {
+  border-right: 1px solid #c7c4c4;
 }

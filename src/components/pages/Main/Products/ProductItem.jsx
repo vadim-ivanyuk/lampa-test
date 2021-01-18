@@ -18,10 +18,7 @@ export const ProductItem = (props) => {
       <p className="product-item__price font-weight-bold">
         Price: {product.price} $
       </p>
-      <button
-        className="btn btn-dark col-12"
-        onClick={addToCart.bind(this, product)}
-      >
+      <button className="btn btn-dark col-12" onClick={addToCart(product)}>
         Add to cart
       </button>
     </div>

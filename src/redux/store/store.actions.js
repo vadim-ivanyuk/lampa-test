@@ -16,5 +16,6 @@ export const updateProducts = createAction(
 );
 
 export const updateCart = createAction("UPDATE_CART", (cart) => {
+  localStorage.setItem("cart", JSON.stringify(cart));
   return cart;
 });

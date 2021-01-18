@@ -2,7 +2,7 @@ import { handleActions } from "redux-actions";
 
 const initialState = {
   products: [],
-  cart: [],
+  cart: JSON.parse(localStorage.getItem("cart")) || [],
 };
 
 const storeReducer = handleActions(

@@ -5,11 +5,17 @@ import { updateCart } from "../../../../redux/store/store.actions";
 
 export const ProductsList = () => {
   const store = useSelector((state) => state.store);
+  const { cart } = store;
   const dispatch = useDispatch();
 
-  const addToCart = (product) => {
-    const cart = store.cart;
-    cart.push(product);
+  const isCart = (id) => cart.findIndex((elem) => elem.id === id) !== -1;
+
+  const addToCart = (product) => () => {
+    const selectedProduct = cart.findIndex((elem) => elem.id === product.id);
+
+    isCart(product.id)
+      ? (cart[selectedProduct].quantity = cart[selectedProduct].quantity + 1)
+      : cart.push({ ...product, quantity: 1 });
 
     dispatch(updateCart(cart));
   };
