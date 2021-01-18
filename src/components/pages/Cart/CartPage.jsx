@@ -1,5 +1,6 @@
 import React from "react";
 import { ProductsList } from "./Products/ProductsList.jsx";
+import OrderForm from "./OrderForm/OrderForm.jsx";
 
 export const CartPage = () => {
   return (
@@ -7,7 +8,9 @@ export const CartPage = () => {
       <div className="col-9 cart-products">
         <ProductsList />
       </div>
-      <div className="col-3">Form</div>
+      <div className="col-3">
+        <OrderForm />
+      </div>
     </div>
   );
 };

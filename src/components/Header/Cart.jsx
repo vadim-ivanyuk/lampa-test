@@ -7,19 +7,14 @@ export const Cart = () => {
   const { cart } = store;
 
   const getTotalPrice = () => {
-    if (cart.length > 0) {
+    if (cart.length > 0)
       return cart
-        .map((product) => {
-          return Number(product.price) * product.quantity;
-        })
-        .reduce((sum, current) => {
-          return sum + current;
-        });
-    }
+        .map((product) => Number(product.price) * product.quantity)
+        .reduce((previousValue, currentValue) => previousValue + currentValue);
   };
 
   return (
-    <div className="d-flex">
+    <div className="d-flex cart">
       <div className="d-flex align-items-center mr-3">
         {cart.length > 0 && (
           <p className="d-flex align-items-center mb-0">
